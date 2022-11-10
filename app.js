@@ -5,7 +5,7 @@ const __dirname = process.cwd();
 
 const app = express();
 
-// app.use(express.static(join(process.cwd(), 'frontend/pam')));
+// from: https://stackoverflow.com/questions/60025303/set-express-static-directory-dynamically
 
 app.use((req, res, next) => {
   const host = req.headers.host.split('.')[0];
